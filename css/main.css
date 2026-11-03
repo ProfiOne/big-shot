@@ -1,0 +1,276 @@
+:root {
+    --black: black;
+    --dark: #222222;
+    --white: #ffffff;
+    --pink: #feafc9;
+    --yellow: #fef301;
+}
+
+@font-face {
+  font-family: 'PixelFont';
+  src: url('fonts/pixel-font.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html{
+    background-color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    color: var(--white);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+h1{
+    color: var(--pink);
+    text-align: center;
+}
+
+h2 {
+    color: var(--yellow);
+    text-align: center;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-right: auto;
+    background-color: var(--dark);
+}
+
+.nav-btns{
+    display: flex;
+    gap: 10px
+}
+
+nav a {
+    color: var(--black);
+    background-color: var(--yellow);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px;
+
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--pink);
+    border-radius: 25px;
+}
+
+.logo img{
+    height: 40px;
+}
+
+.logo a{
+    font-size: 24px;
+    color: var(--pink);
+    text-decoration: none;
+    background-color: var(--dark);
+
+    transition: all 0.3s ease;
+}
+
+.logo a:hover{
+    color: var(--yellow);
+}
+
+main{
+    margin: 20px 10%;
+    background-color: var(--dark);
+    padding: 10px 10px;
+    border-radius: 25px;
+}
+
+.dialog {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: var(--black);
+    border: 5px solid var(--white);
+    margin: 40px 40px;
+    padding: 20px 20px;
+}
+
+.dialog img{
+    max-width: 100%;
+    max-height: 320px;
+    transition: all 0.3s ease;
+}
+
+.typing-text {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 32px;
+    display: inline-block;
+}
+
+.line {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    width: 0;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 18px;
+    line-height: 1.5;
+    animation: typing 3s steps(30, end) forwards;
+}
+
+.line-1{
+    animation: typing 2.5s steps(22, end) forwards;
+}
+
+.line-2{
+    width: 0;
+    animation: typing 2.5s steps(26, end) 2.5s forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes typing{
+    from{width: 0;}
+    to{width: 100%;}
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.box {
+    padding: 10px;
+    background-color: var(--black);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px var(--black);
+    border: 1px solid var(--yellow);
+
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    border: 2px solid var(--pink);
+    color: var(--yellow);
+    transform: scale(1.05);
+}
+
+.box img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.box h3{
+    font-size: 32px;
+    text-align: center;
+}
+
+.pirate {
+    position: fixed;
+    bottom: -150px;
+    left: 350px;
+    width: 50%;
+
+    animation: waves 2s ease infinite, move 16s normal infinite;
+}
+
+.waves {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@keyframes waves {
+    0%, 50%, 100% {
+        transform: translateX(350px) translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateX(365px) translateY(15px) rotate(6deg);
+    }
+    75% {
+        transform: translateX(335px) translateY(-15px) rotate(-6deg);
+    }
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translate(0 0);
+    }
+    50% {
+        transform: translate(-250px);
+    }
+}
+
+.secret {
+    opacity: 0;
+    justify-content: center;
+}
+
+.secret:hover{
+    opacity: 1;
+}
+
+.sticker {
+    width: 20%;
+    height: 230px;
+    background-image: url(/images/spamton-dance.gif);
+    background-size: cover;
+}
+
+.sticker:hover {
+    background-image: url(/images/SpamtonBase.webp);
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+    background-image: url(/images/spamton-dance.gif);
+    background-repeat: repeat;
+    background-size: 300px 300px;
+
+    animation: bgMove 2s linear infinite;
+}
+
+@keyframes bgMove{
+    0% {background-position: 0 0;}
+    100% {background-position: 300px 300px;}
+}
+
+#intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+#intro-overlay img {
+    width: 100%;
+    height: 100%;
+}
+
+.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
