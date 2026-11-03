@@ -4,6 +4,8 @@
     --white: #ffffff;
     --pink: #feafc9;
     --yellow: #fef301;
+    --border-radius: 10px;
+    --border-width: 2px
 }
 
 @font-face {
@@ -69,6 +71,11 @@ nav a {
 nav a:hover {
     background-color: var(--pink);
     border-radius: 25px;
+}
+
+.logo {
+    justify-content: center;
+    align-items: center;
 }
 
 .logo img{
@@ -273,4 +280,57 @@ main{
 .fade-out {
     opacity: 0;
     pointer-events: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.form-group2 {
+    margin: 15px;
+    display: flex;
+}
+
+.form-group2 label {
+    flex: 0 0 100px;
+    color: var(--text-color);
+}
+
+.form-group2 input {
+    flex: 1;
+    padding: 8px;
+    border: var(--border-width) solid var(--yellow);
+    border-radius: var(--border-radius);
+    background-color: var(--black);
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group2 input:focus {
+    outline: none;
+    border-color: var(--pink);
+    box-shadow: 0 0 5px var(--pink);
+}
+
+.form-group2 select {
+    flex: 1;
+    padding: 8px;
+    border: var(--border-width) solid var(--yellow);
+    border-radius: var(--border-radius);
+    background-color: var(--black);
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--pink);
+    font-weight: 500;
+    font-size: clamp(24px 0.5rem 48px);
+    color: var(--black);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
