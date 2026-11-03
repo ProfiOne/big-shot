@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Shot</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/SpamtonBase.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="intro-overlay">
+        <img src="images/capcut.gif" alt="Загрузка...">
+    </div>
+
+    <div class="bg"></div>
+    <header>   
+        <nav>
+            <div class="logo">
+                <img src="images/SpamtonBase.webp" alt="">
+                <a href="index.html">Спамтон</a>
+            </div>
+            <div class="nav-btns">
+                <a href="index.html" class="btn-white">Главная</a>
+                <a href="bio.html" class="btn-white">Биография</a>
+                <a href="content.html" class="btn-white">Контент</a>
+                <a href="not-index.html" class="btn-white">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="dialog">
+                <div class="typer">
+                    <p class="line line1">3аполни немного [[данных]].</p>
+                    <p class="line line2">Я их никуда [[не солью]]</p>
+                </div>
+                <div class="image-container" onclick="playGif(this)">
+                    <img class="main-img" src="images/Spamton_face_shop.webp" alt="Статичное фото">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <form method="GET">
+                <div class="form-group">
+                    <div class="form-group2">
+                        <label for="family">Фамилия:</label>
+                        <input type="text" id="family" name="family" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="birth-date">Дата рождения:</label>
+                        <input type="date" id="birth-date" name="birth-date" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group2">
+                        <label for="email">Почта:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="phone">Номер телефона:</label>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="passport">Паспорт:</label>
+                        <input type="text" id="passport" name="passport" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-group2">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="confirm-password">Повторите пароль:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group2">
+                        <label for="gender">Пол:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Выберите пол</option>
+                            <option value="male">Мужской</option>
+                            <option value="female">Женский</option>
+                            <option value="other">Другое</option>
+                            <option value="laminat">Ламинат</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="country">Страна:</label>
+                        <input type="text" id="country" name="country" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="city">Город:</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group2">
+                        <label for="card">Циферки с карточки:</label>
+                        <input type="text" id="card" name="card" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="CVC">Циферки с оборота карточки:</label>
+                        <input type="text" id="CVC" name="CVC" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="ZP">Сколько ЗП:</label>
+                        <input type="text" id="ZP" name="ZP" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group2">
+                        <label for="mail">Почтовые данные:</label>
+                        <input type="text" id="mail" name="mail" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="address">Адрес:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="house">Что ценного в доме:</label>
+                        <input type="text" id="house" name="house" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group2">
+                        <label for="googleP">Пароль от Гугла:</label>
+                        <input type="text" id="googleP" name="googleP" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="mailP">Пароль от почты:</label>
+                        <input type="text" id="mailP" name="mailP" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="cardP">Пароль от банка:</label>
+                        <input type="text" id="cardP" name="cardP" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group2">
+                        <label for="key">Скрин ключа от дома:</label>
+                        <input type="text" id="key" name="key">
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="life">Причина жить:</label>
+                        <input type="text" id="life" name="life" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="pochki">Сколько почек:</label>
+                        <input type="text" id="pochki" name="pochki" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group2">
+                        <label for="Mcard">Данные маминой карточки:</label>
+                        <input type="text" id="Mcard" name="Mcard">
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="Fcard">Данные папиной карточки:</label>
+                        <input type="text" id="Fcard" name="Fcard" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="Inners">Органы в наличии:</label>
+                        <input type="text" id="Inners" name="Inners" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group2">
+                        <label for="gender">Знак зодиака:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Выберите знак</option>
+                            <option value="sim1">Барашек</option>
+                            <option value="sim2">Лягушка</option>
+                            <option value="sim3">Двойка</option>
+                            <option value="sim4">69</option>
+                            <option value="sim5">Глист</option>
+                            <option value="sim6">М</option>
+                            <option value="sim7">Омега</option>
+                            <option value="sim8">Ещё М</option>
+                            <option value="sim9">Клюшка</option>
+                            <option value="sim10">Н</option>
+                            <option value="sim11">Пила</option>
+                            <option value="sim12">Что это блин</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="gender">Тип личности:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Выберите личность</option>
+                            <option value="sim1">Идиот</option>
+                            <option value="sim2">Идиот</option>
+                            <option value="sim3">Малолетка</option>
+                            <option value="sim4">Тиктокер</option>
+                            <option value="sim5">67 хромосом</option>
+                            <option value="sim6">Идиот</option>
+                            <option value="sim7">67 QI</option>
+                            <option value="sim8">Глава картеля</option>
+                            <option value="sim9">Гений (без ни)</option>
+                            <option value="sim10">Иххихиха!</option>
+                            <option value="sim11">Пила</option>
+                            <option value="sim12">Кирпич</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="gender">Любимая фигура:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Выберите фигуру</option>
+                            <option value="sim13">Двухсотпятидесятичетырёхугольная призма</option>
+                            <option value="sim1">Ромбоусечённый икосододекаэдр</option>
+                            <option value="sim2">Гекзакисикосадодекаэдр</option>
+                            <option value="sim3">Ромбоикосододекаэдр</option>
+                            <option value="sim4">Плосконосый додекаэдр</option>
+                            <option value="sim5">Пентагональный гексаэдр</option>
+                            <option value="sim6">Усечённый икосододекаэдр</option>
+                            <option value="sim7">Триакисикосадодекаэдр</option>
+                            <option value="sim8">Гекзакисоктаэдр</option>
+                            <option value="sim9">Триакисоктаэдр</option>
+                            <option value="sim10">Тетракисгексаэдр</option>
+                            <option value="sim11">Икосододекаэдр</option>
+                            <option value="sim12">Параллелепипед</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group2">
+                        <label for="rules">Согласие с правилами сайта</label>
+                        <input type="checkbox" id="rules" name="rules" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="syd">Отсутствие судимости</label>
+                        <input type="checkbox" id="syd" name="syd" required>
+                    </div>
+                    
+                    <div class="form-group2">
+                        <label for="zavod">Готовность пахать на заводе</label>
+                        <input type="checkbox" id="zavod" name="zavod" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="credits">Брал кредиты</label>
+                        <input type="checkbox" id="credits" name="credits" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="Imperator">Император существует</label>
+                        <input type="checkbox" id="Imperator" name="Imperator" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="Monolit">Уверовать в Монолит</label>
+                        <input type="checkbox" id="Monolit" name="Monolit" required>
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="Beton">Бетон</label>
+                        <input type="checkbox" id="Beton" name="Beton" required>
+                    </div>
+                </div>
+
+                <a href="soglashenie.html">Пользовательское соглашение</a>
+
+                <button type="submit" id="submit">Отправить</button>
+        </section>
+    </main>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const overlay = document.getElementById("intro-overlay");
+        const displayTime = 2000; 
+
+        setTimeout(() => {
+            // Включаем плавное исчезновение (CSS transition)
+            overlay.classList.add("fade-out");
+            
+            // Полностью удаляем элемент из HTML после завершения CSS-анимации (через 500мс)
+            setTimeout(() => {
+                overlay.remove();
+            }, 500);
+            
+            // Запоминаем, что анимация уже была показана
+            sessionStorage.setItem("introShown", "true");
+        }, displayTime);
+    });
+    </script>
+</body>
+<script>
+    function validatePassword(password) {
+        const rules = [
+            { id: "digit", label: "Пароль должен содержать хотя бы одну цифру", check: (p) => /\d/.test(p) },
+            { id: "special", label: "Пароль должен содержать хотя бы один специальный символ", check: (p) => /[!@#$%^&*(),.?":{}|<>]/.test(p) },
+            { id: "sponsor", label: "Пароль должен содержать одного из наших спонсоров: Папич, Монолит, Бетон, Император, Пиво, ДядяБогдан, Паравозик, Пельмень, Спамтон", check: (p) => /(Папич|Монолит|Бетон|Император|Пиво|ДядяБогдан|Паравозик|Пельмень|Спамтон)/i.test(p) },
+            { id: "length", label: "Пароль должен быть не менее 47 символов", check: (p) => p.length >= 47 },
+            { id: "roman", label: "Пароль должен содержать хотя бы одну римскую цифру", check: (p) => /[IVXLCDM]/i.test(p) },
+            { id: "beton", label: "Пароль должен содержать слово 'бетон'", check: (p) => /бетон/i.test(p) },
+            { id: "math", label: "Пароль должен содержать сумму 25+22", check: (p) => {
+                const numbers = p.match(/\d+/g);
+                if (!numbers) return false;
+                const sum = numbers.reduce((acc, num) => acc + parseInt(num, 10), 0);
+                return sum === 47;
+            }}
+        ];
+
+        const results = rules.map(rule => ({
+            label: rule.label,
+            valid: rule.check(password)
+        }));
+
+        const allValid = results.every(result => result.valid);
+
+        return {
+            isValid: allValid,
+            errors: results.filter(result => !result.valid).map(result => result.label),
+            details: results
+        };
+    }
+
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const pwdInput = document.getElementById("password");
+        const validation = validatePassword(pwdInput.value);
+        if (!validation.isValid) {
+            alert("Ошибки в пароле:\n" + validation.errors.join("\n"));
+        } else {
+            alert("Ладно, так уж и быть. Теперь ты собственность картеля.");
+            window.location.href = "kartel.html";
+        }
+    });
+</script>
+</html>
