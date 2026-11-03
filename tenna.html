@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Shot</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/SpamtonBase.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="intro-overlay">
+        <img src="images/capcut.gif" alt="Загрузка...">
+    </div>
+
+    <div class="bg"></div>
+    
+    <header>   
+        <nav>
+            <div class="logo">
+                <img src="images/SpamtonBase.webp" alt="">
+                <a href="index.html">Спамтон</a>
+            </div>
+            <div class="nav-btns">
+                <a href="index.html" class="btn-white">Главная</a>
+                <a href="bio.html" class="btn-white">Биография</a>
+                <a href="content.html" class="btn-white">Контент</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="dialog">
+                <div class="typer">
+                    <p class="line line1">[[Не верь]] этому предателю!</p>
+                    <p class="line line2">Он не заслуживает страницы на сайте.</p>
+                    <p class="line line2">Да, я его [[Гиперссылка заблокированна]]</p>
+                </div>
+                <img src="images/Spamton_face_shop.webp" alt="">
+            </div>
+        </section>
+    </main> 
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const overlay = document.getElementById("intro-overlay");
+        const displayTime = 2000; 
+
+        setTimeout(() => {
+            // Включаем плавное исчезновение (CSS transition)
+            overlay.classList.add("fade-out");
+            
+            // Полностью удаляем элемент из HTML после завершения CSS-анимации (через 500мс)
+            setTimeout(() => {
+                overlay.remove();
+            }, 500);
+            
+            // Запоминаем, что анимация уже была показана
+            sessionStorage.setItem("introShown", "true");
+        }, displayTime);
+    });
+    </script>
+</body>
+</html>

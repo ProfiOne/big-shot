@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Shot</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/SpamtonBase.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="intro-overlay">
+        <img src="images/capcut.gif" alt="Загрузка...">
+    </div>
+
+    <div class="bg"></div>
+    <header>   
+        <nav>
+            <div class="logo">
+                <img src="images/SpamtonBase.webp" alt="">
+                <a href="index.html">Спамтон</a>
+            </div>
+            <div class="nav-btns">
+                <a href="index.html" class="btn-white">Главная</a>
+                <a href="bio.html" class="btn-white">Биография</a>
+                <a href="content.html" class="btn-white">Контент</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Спамтон</h1>
+            <div class="dialog">
+                <div class="typer">
+                    <p class="line line1">Привет, [[пользователь]]! Я Спамтон!</p>
+                    <p class="line line2"> Я думаю ты знаешь что я из [[Deltarune]].</p>
+                </div>
+                <div class="image-container" onclick="playGif(this)">
+                    <img class="main-img" src="images/Spamton_face_shop.webp" alt="Статичное фото">
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 20px;"></div>
+
+        <section style="text-align: center;">
+            <h2>Кто это</h2>
+            <p>Спамтон лучший персонаж из Deltarune! Он смешной и запоминающийся.</p>
+            <p>Раньше он работал рекламщиком и был очень успешным. Сейчас живёт в мусорке.</p>
+            <p>Спамтон впервые появился во второй главе уже после того как стал бомжом.</p>
+            <p>Его главное достижение: он невероятно понравился комьюнити и стал ходячим мемом.</p>
+        </section>
+
+        <div style="height: 20px;"></div>
+
+        <section>
+            <h2>Связанные персонажи:</h2>
+            <div class="container">
+                <a href="gaster.html">
+                <div class="box">
+                    <h3>Гастер</h3>
+                    <img src="images/Gaster.png" alt="">
+                </div>
+                </a>
+
+                <a href="friend.html">
+                <div class="box">
+                    <h3>Френд</h3>
+                    <img src="images/friend.webp" alt="">
+                </div>
+                </a>
+
+                <a href="tenna.html">
+                <div class="box">
+                    <h3>Тенна</h3>
+                    <img src="images/tenna.webp" alt="">
+                </div>
+                </a>
+            </div>
+        </section>
+
+        <div style="height: 40px;"></div>
+
+        <div style="display: flex;">
+            <div  class="sticker"></div>
+            <div  class="sticker"></div>
+            <div  class="sticker"></div>
+            <div  class="sticker"></div>
+            <div  class="sticker"></div>
+        </div>
+
+        <div style="height: 20px;"></div>
+    </main>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const overlay = document.getElementById("intro-overlay");
+        const displayTime = 2000; 
+
+        setTimeout(() => {
+            // Включаем плавное исчезновение (CSS transition)
+            overlay.classList.add("fade-out");
+            
+            // Полностью удаляем элемент из HTML после завершения CSS-анимации (через 500мс)
+            setTimeout(() => {
+                overlay.remove();
+            }, 500);
+            
+            // Запоминаем, что анимация уже была показана
+            sessionStorage.setItem("introShown", "true");
+        }, displayTime);
+    });
+    </script>
+</body>
+</html>
