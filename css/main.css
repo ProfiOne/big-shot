@@ -224,7 +224,7 @@ main{
 .sticker {
     width: 20%;
     height: 230px;
-    background-image: url(/images/spamton-dance.gif);
+    background-image: url(https://profione.github.io/big-shot/images/spamton-dance.gif);
     background-size: cover;
 }
 
@@ -240,7 +240,7 @@ main{
     height: 100vh;
     z-index: -1;
 
-    background-image: url(/images/spamton-dance.gif);
+    background-image: url(https://profione.github.io/big-shot/images/spamton-dance.gif);
     background-repeat: repeat;
     background-size: 300px 300px;
 
